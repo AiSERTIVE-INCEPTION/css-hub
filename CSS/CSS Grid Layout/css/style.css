@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Cambria;
+    font-weight: bold;
+    color: black;
+}
+
+body{
+  background-color: cornsilk;
+}
+
+@media only screen and (max-width: 768px) {
+  [class*="col-"] {
+    width: 50%;
+  }
+
+  .block-0{
+    width: 100%;
+  }
+
+  .block-1{
+    height: fit-content;
+  }
+
+  nav.li{
+    float: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+  p{
+    font-size: 1.2vw;
+  }
+
+  [class*="block-"] {
+    font-size: 1.2vw;
+  }
+}
+
+[class*="col-"] {
+  display: block;
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-color: white;
+  place-items: center;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+  font-size: 1vw;
+  min-width: max-content;
+  min-height: 50px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 8px 10px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: bisque;
+  color: black;
+}
+
+.active {
+  background-color: rgb(94, 168, 131);
+}
+
+[class*="block-"] {
+  height: 200px;
+  padding: 20px 5px;
+  align-items: center;
+  text-align: center;
+}
+
+.block-0{
+  background-color: rgb(94, 168, 131);
+  font-size: 1em;
+}
+
+.block-0 a {
+  display: block;
+  text-decoration: none;
+}
+
+.block-0:hover{
+  background-color: ivory;
+}
+
+.block-1{
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  font-size: 1em;
+  padding: 40px;
+  text-align: left;
+  height: inherit;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+h{
+  color: white;
+}
+
+p{
+  color: rgb(194, 221, 245);
+  font-size:1em;
+}
