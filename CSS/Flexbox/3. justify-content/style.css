@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: inherit;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+.container > * {
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.container--1 {background-color: orangered;}
+.container--2 {background-color: royalblue;}
+.container--3 {background-color: rosybrown;}
+.container--4 {background-color: yellowgreen;}
+.container--5 {background-color: plum;}
+.container--6 {background-color: hotpink;}
+
+/* following are regard to flexbox */
+
+.container {
+    background-color: beige;
+    width: 100%;
+    /* height: 100vh; */
+    font-size: 2rem;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+}
+
+/*
+Tip:
+    "justify-content" centers the elements within the parent block (container in this case).
+    It centers the elements along the main axis.
+    If we declared main-axis as row (default), it centers the elements along the row
+    If we set the "flex-direction" as column, it centers the elemetns along the column. To see this uncomment "height" and "flex-direction".
+    We can use justify-content: space-between, space-around, flex-end and flex-start in addition to center
+*/
+

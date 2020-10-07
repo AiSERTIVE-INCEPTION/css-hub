@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: inherit;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+.container > * {
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.container--1 {background-color: orangered;}
+.container--2 {background-color: royalblue;}
+.container--3 {background-color: rosybrown;}
+.container--4 {background-color: yellowgreen;}
+.container--5 {background-color: plum;}
+.container--6 {background-color: hotpink;}
+
+/* following are regard to flexbox */
+
+.container {
+    background-color: beige;
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+Tip:
+    Change the property of "flex-direction" inside container to "row" and "column".
+    The default flex direction is set to row.
+    If we choose fd: row, the main axis will be horizontal.
+    On the other hand if we set it to column, the main axis will be vertical
+*/
+
