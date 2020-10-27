@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            margin: 0 100px;
+        }
+        ul {
+            list-style: none;
+            margin:0;
+            padding:0;
+        }
+        ul li {
+            display: inline;
+            background-color: #ccc;
+        }
+        ul li a {
+            padding: 10px;
+            background-color: #ccc;
+        }
+        .active-tab {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interactive Tabs</h1>
+    <div class="user-tabs">
+        <ul>
+            <li><a href="#" id="tab1" class="active-tab">Home</a></li>
+            <li><a href="#" id="tab2">Downloads</a></li>
+            <li><a href="#" id="tab3">Help & Support</a></li>
+        </ul>
+    </div>
+
+
+    <div class="tabCcontainer" id="tab1C">
+        <h2>Tab1</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum fuga sint ab odit voluptas dolorum distinctio, ea eius sed quaerat? Reprehenderit quasi alias ut accusantium reiciendis temporibus non soluta, dolorum repellendus cupiditate sint dicta perspiciatis nulla ipsum velit quod, fugiat labore incidunt molestias vero. Maiores molestiae, tenetur eaque unde, reprehenderit eum, quae officiis iusto deleniti ratione repellat rerum quas ullam! Nihil perspiciatis culpa velit odit aliquam nostrum eveniet placeat expedita explicabo assumenda dolore minima nulla vitae, maiores aliquid vel. Libero dolor minima enim. In temporibus aliquid facere totam, earum, vero illum voluptatibus, fugit a quo quae fugiat officiis consectetur voluptatem.
+        </p>
+    </div>
+
+    <div class="tabContainer" id="tab2C">
+        <h2>Tab2</h2>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis impedit, aliquam nihil sint rerum laudantium in placeat dicta nisi, eligendi vel esse atque qui dolore maxime et voluptatem facere repellat magnam ut nostrum commodi sequi. Consequatur explicabo fuga iusto provident repudiandae quibusdam minima, nihil culpa dicta itaque saepe obcaecati, distit nisi magni?
+        </p>
+    </div>
+
+    <div class="tabContainer" id="tab3C">
+        <h2>Tab3</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum fuga sint ab odit voluptas dolorum distinctio, ea eius sed quaerat? Reprehenderit quasi alias ut accusantium reiciendis temporibus non soluta, dolo expedita explicabo assumenda dolore minima nulla vitae, maiores aliquid vel. Libero dolor minima enim. In temporibus aliquid facere totam, earum, vero illum voluptatibus, fugit a quo quae fugiat officiis consectetur voluptatem.
+        </p>
+    </div>
+
+</body>
+<script>
+    /// Display tabcontainer which has active class
+var id = $('.user-tabs .active-tab').attr('id');
+$('.tabContainer').hide();
+$('.tabContainer#'+id+'C').show();
+
+//// Change the tab when user clicks
+$('.user-tabs a').click(function(){
+    console.log(this.id);
+    if(!$(this).hasClass('active-tab')) {
+        $('.user-tabs a').removeClass('active-tab');
+        $(this).addClass('active-tab');
+        $('.tabContainer').hide();
+        $('.tabContainer#'+this.id+'C').show();
+    }
+});
+</script>
+</html>
