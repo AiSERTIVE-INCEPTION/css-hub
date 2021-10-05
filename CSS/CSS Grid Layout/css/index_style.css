@@ -11,12 +11,12 @@
 }
 
 .wrapper > div {
-  background: #c77373;
+  background: #c74373;
   padding: 1em;
 }
 
 .wrapper > div:nth-child(odd) {
-  background: #dddd;
+  background: #ddddee;
 }
 
 .nested {
